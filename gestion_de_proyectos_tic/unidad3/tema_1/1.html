@@ -1,149 +1,157 @@
-<h2><!-- titulo tema 1 unidad3 --></h2>
-<div class="nota">
-    <div class="notaicono"></div>
-        <h3>Nota:</h3>
-            <p>Estimado estudiante: los conceptos a continuación corresponden a la determinación del tamaño y el alcance de un proyecto informático. El tema se presenta con objetos, resúmenes y gráficos, con el propósito de hacer más fácil el proceso de aprendizaje y la asimilación de conceptos por parte de los estudiantes. Se recomienda adentrarse en cada uno de ellos, y hacer uso de los objetos de información provistos para ampliar la información contenida en esta unidad.</p>
-</div>
-<h3>1.1 Tamaño de un proyecto informático</h3>
-<p>En términos del cálculo del tamaño del software, son muchas las medidas que históricamente se han empleado. Entre ellas se cuentan el número de líneas de código, el número de programas fuente, el número de bytes que ocupa el(los) programa(s) en disco, el número de pantallas o número de reportes que tiene. Tales técnicas no son del todo aceptables debido a que su medición depende del entorno tecnológico y del lenguaje de programación empleado; además, dependen también de la experiencia y las habilidades que tenga cada programador, de forma que, si la intención es determinar el tamaño para poder estimar por ejemplo el coste del proyecto, es necesario que se empleen medidas más fiables que las descritas.</p> 
-<p>Teniendo en cuenta lo anterior, se han creado estándares internacionales que permiten calcular el tamaño funcional de un proyecto de TI; en particular, el estándar ISO/IEC 14143-1:2007, creado por la organización internacional ISO/IEC, que contiene una serie de métodos de recuento que hacen posible determinar el tamaño de un proyecto dado.</p>
-<p>Estas mediciones del estándar se basan en el cálculo de los puntos función (PF). Este método sostiene que todos los requisitos funcionales de un producto software pueden ser enmarcados en alguno de estos cinco tipos:</p>
-<ul class="content">
-    <li>Salidas</li>
-    <li>Consultas</li>
-    <li>Entradas</li>
-    <li>Ficheros internos</li>
-    <li>Interfaces externas</li>
-</ul>
-<p>Un PF representa una unidad estándar de medida, asociada al tamaño funcional de una aplicación de software. Los proyectos se pueden medir con unidades; de forma similar a como calculamos el volumen de un cubo en cm3, o el diámetro de una circunferencia en m, el tamaño de una aplicación se mide por el número de PF (Albretch y Gaffney, 1983).</p>
-<p>El éxito de la técnica de los puntos de función radica en que esta métrica es fiable para calcular el tamaño del proyecto porque:</p> 
-<ul>
-    <li>1) El tamaño y la funcionalidad de la aplicación se miden desde el punto de vista del usuario. Así, el gerente toma en cuenta las demandas del usuario, tales como pantallas donde se realizan las entradas de datos o informes de salida. La técnica se basa en el conocimiento, por parte de los usuarios, de los datos que deben ser almacenados y procesados por el sistema.</li> 
-    <li>2) La técnica es independiente de la tecnología. No importa el lenguaje de programación que se use, el análisis se hace con base en las pantallas y las tablas de datos, y de allí se deriva el número de PF necesarios. </li>
-    <li>3) La técnica tiene un coste, clasificado desde bajo hasta moderado. De acuerdo con ciertas estadísticas, emplear la técnica de PF en un proyecto supone un incremento del coste como máximo del 1%.</li>
-    <li>4) La técnica FP es repetible, ya que diversos contadores de PF pueden medir de forma separada la misma aplicación, con un margen poco considerable de diferencia entre unos  y otros. </li>
-</ul>
-<p>Considerando su carácter de estándar internacional, y también las características de la métrica (señaladas en el párrafo anterior), muchos gerentes de proyectos la han adoptado porque presenta las siguientes ventajas adicionales:</p>
-<div class="media-content right">
-    <div class="media"><a class="retina" href=""><img src="../images/" alt=""></a></div>
-    <div class="spacer" style="height:5px;"></div>
-    <div class="description">Figura 2. Ventajas del uso de PF en un proyecto<br/>Fuente: Elaboración propia a partir de Aemes (2010)</div>
-</div>
-<p>Así, el coste de desarrollo de software por cada PF varía, dependiendo de la tecnología utilizada, del tamaño del proyecto, de los requisitos de calidad exigidos y de otros parámetros, pero en general la media está en 11,35 horas-hombre por punto función (Wikipedia, 2012).</p>
-<div class="resumen">
-    <div class="resumenicono"></div>
-        <h3>Resumen:</h3>
-            <p>Una de las medidas más empleadas para calcular el tamaño de un proyecto informático son los puntos de función, estándar internacional creado por ISO/IEC, que se basa en el cálculo de salidas, entradas, consultas, ficheros internos e interfaces externas de un proyecto. Los gerentes de proyectos se apoyan en el cálculo de los mismos, ya que su medición es de bajo coste, la técnica es independiente de la tecnología empleada y además es repetible, lo cual facilita diversas mediciones del mismo proyecto con fines de verificación de las mediciones.</p>
-</div>
-<p>Para ver con más detalle la forma de medir los PF, es necesario aclarar que esta técnica consiste en asignar puntos de acuerdo con la complejidad de los datos que una aplicación maneja, y también con base en la complejidad de los procesos que realiza sobre ellos. El proceso anterior siempre se debe llevar a cabo desde el punto de vista del usuario y no del programador o del gerente. En eso se apoyan las premisas fundamentales de esta métrica. De esta forma, los PF miden el tamaño lógico o funcional de los proyectos o aplicaciones de software, basados en los requerimientos funcionales del usuario.</p>
-<p>Una guía muy útil acerca de cómo calcular los PF la provee el International Function Point Users Group (IFPUG, 2012). A continuación se relacionan algunos pasos-resumen de los propuestos por esta organización.</p>
-<table>
-    <tr>
-        <td>
-            <p>Determinar el tipo de recuento</p>
-        </td>
-        <td>
-            <p>¿Se trata de un proyecto?</p>
-            <p>¿Una mejora?</p>
-            <p>¿Una aplicación ya instalada?</p>
-            <p>Existen diferencias en cada caso. Puede tratarse de funciones de conversión, modificación y baja de funcionalidad, y cada una arrojará una medida distinta de PF.</p>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <p>Identificar el alcance y los límites</p>
-        </td>
-        <td>
-            <p>Definir con exactitud hasta dónde se quiere medir.</p>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <p>Contar las funciones de datos</p>
-        </td>
-        <td>
-            <p>Desde el punto de vista de un usuario, se contabilizan los ficheros lógicos empleados, tanto internos a la aplicación, como externos a ella. Para cada fichero se cuenta el número de datos y de registros lógicos.</p>
-            <p>Con el número resultante se calcula un índice de complejidad para cada fichero, y posteriormente, una cantidad de PF.</p>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <p>Contar las funciones transaccionales</p>
-        </td>
-        <td>
-            <p>Desde el punto de vista de un usuario, se contabilizan los procesos del sistema. Se hacen distinciones entre entradas, salidas y consultas. Dependiendo de los ficheros que maneja cada proceso y de la naturaleza misma del proceso, se calculan los PF asociados.</p>
-        </td>
-    </tr>
-    <tr>
-        <td>
-                <p>Hacer recuento bruto de PF</p>
-        </td>
-        <td>
-            <p>Se hace una sumatoria de los PF obtenidos hasta ese momento a partir de los pasos anteriores. Comúnmente a este recuento se denomina: <span class="cita">unadjusted PF.</span></p>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <p>Determinar el factor de ajuste</p>
-        </td>
-        <td>
-            <p>Este factor se calcula con base en 14 características generales del sistema, que se valoran en una escala<span class="cita">likert</span> de 0.5.</p>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <p>Calcula</p>
-        </td>
-        <td>
-            <p>Aplicando el factor de ajuste al recuento bruto, se obtiene el recuento ajustado.</p>
-        </td>
-    </tr>
-</table>
-Cuadro 2. Principales pasos para calcular los PF
-Fuente: IFPUG.
-<p>En el mercado existe un número de instrumentos que permite calcular el tamaño de un proyecto mediante la técnica de PF. En este caso, el instrumento que se provee para que el estudiante explore la técnica se encuentra en el siguiente link:</p>
-<div class="media-content left">
-    <div class="media"><a class="retina" href=""><img src="../images/" alt=""></a></div>
-    <div class="spacer" style="height:5px;"></div>
-    <div class="description">Instrumento 3. - 3 puntos de función<br/>Fuente:</div>
-</div>
-
-
-<p>El instrumento está desarrollado en Excel, a partir de ponderaciones construidas por la Fundación Universitaria Konrad Lorenz (www.fukl.edu), y empleando la metodología de los PF (Albretch y Gaffney, 1983). La hoja Excel permite calcular tanto los puntos de función no ajustados como los ajustados, y el esfuerzo en términos de líneas de código y de horas / hombre por emplear.</p>
-<p>El esquema de trabajo con la hoja es el siguiente (figura 3):</p>
-<div class="media-content right">
-    <div class="media"><a class="retina" href=""><img src="../images/" alt=""></a></div>
-    <div class="spacer" style="height:5px;"></div>
-    <div class="description">Figura 3. Cálculo de puntos de función por elementos<br/>Fuente: Elaboración propia</div>
-</div>
-<p>Para cada uno de los apartados del sistema por evaluar:</p>
-<ul>
-    <li>a)  Entradas</li>
-    <li>b)  Salidas</li>
-    <li>c)  Consultas</li>
-    <li>d)  Archivos</li>
-    <li>e)  Interfaces</li>
-</ul>
-<p>se debe analizar si su complejidad es alta, media o baja, y para ello se requiere usar las ayudas de la hoja Excel. Por ejemplo:</p> 
-<p>Siempre, en los recuadros verdes, se ha de indicar el número de entradas del sistema. Si las mismas corresponden a menos de dos ficheros accedidos, con menos de cinco atributos totales, entonces debe clasificarlo como entradas de complejidad baja, y escribir el número de esas entradas en la celda verde correspondiente.</p>
-<p>Si el sistema cuenta con hasta dos ficheros accedidos, con máximo 15 atributos, entonces debe señalarlo como de complejidad media, y escribir el número de entradas en la celda correspondiente a entradas de complejidad media.</p>
-<p>Finalmente, si el sistema cuenta con más de dos ficheros accedidos, con más de 15 atributos, entonces deberá colocar el número de entradas en la celda verde correspondiente a entradas de complejidad alta.</p>
-<p>La hoja de Excel automáticamente calculará el subtotal por elementos en la columna de la derecha, y para cada elemento (entradas, salidas, consultas, archivos, interfaces), el sistema brinda una ayuda (comentarios) en el lado derecho de las celdas.</p>
-<p>Por otra parte, para el cálculo de los factores de corrección (ver figura 4), se ofrece una escala Likert de 0 - 5, con el fin de calificar aspectos tales como: comunicaciones de datos, velocidad de transacción, facilidad de instalación, etc. Se debe calificar de 0 - 5, donde 0 = Sin efecto en la complejidad del procesado, y 5 = Gran efecto en la complejidad del procesado. La hoja de Excel calcula automáticamente el ajuste de complejidad técnica (ACT).</p>
-<div class="media-content left">
-    <div class="media"><a class="retina" href=""><img src="../images/" alt=""></a></div>
-    <div class="spacer" style="height:5px;"></div>
-    <div class="description">Figura 4. Cálculo de puntos de función Ajuste de complejidad técnica<br/>Fuente: Elaboración propia</div>
-</div>
-<p>Finalmente, se debe ingresar en la hoja el número de líneas de código del sistema en la celda indicada para ello, y también las horas/hombre por punto función, de acuerdo con la tabla que se encuentra dentro de la misma hoja de Excel, es decir:</p>
-<ul class="content">
-    <li>Para lenguajes 2GL  25 horas por punto función</li>
-    <li>Para lenguajes 3GL  15 horas por punto función</li>
-    <li>Para lenguajes 4GL  8 horas por punto función</li>
-</ul>
-<div class="media-content right">
-    <div class="media"><a class="retina" href=""><img src="../images/" alt=""></a></div>
-    <div class="spacer" style="height:5px;"></div>
-    <div class="description">Figura 5. Cálculo de puntos de función. Cálculo del esfuerzo<br/>Fuente: Elaboración propia</div>
-</div>
-<p>Para cerrar este apartado, cabe mencionar que los PF tienen una mayor utilidad, es decir, son más fiables, si se calculan a partir de una adecuada especificación de requerimientos. Así, cuando se parte de una base mal establecida, tal como unos requerimientos vagos o mal formulados, no se puede esperar que el cálculo de los PF arroje resultados seguros.</p> 
+<!DOCTYPE html>
+<html>
+	<head></head>
+	<body>
+		<div id="content">
+			<h2><!-- titulo tema 1 unidad3 --></h2>
+			<div class="nota">
+			    <div class="notaicono"></div>
+			        <h3>Nota:</h3>
+			            <p>Estimado estudiante: los conceptos a continuación corresponden a la determinación del tamaño y el alcance de un proyecto informático. El tema se presenta con objetos, resúmenes y gráficos, con el propósito de hacer más fácil el proceso de aprendizaje y la asimilación de conceptos por parte de los estudiantes. Se recomienda adentrarse en cada uno de ellos, y hacer uso de los objetos de información provistos para ampliar la información contenida en esta unidad.</p>
+			</div>
+			<h3>1.1 Tamaño de un proyecto informático</h3>
+			<p>En términos del cálculo del tamaño del software, son muchas las medidas que históricamente se han empleado. Entre ellas se cuentan el número de líneas de código, el número de programas fuente, el número de bytes que ocupa el(los) programa(s) en disco, el número de pantallas o número de reportes que tiene. Tales técnicas no son del todo aceptables debido a que su medición depende del entorno tecnológico y del lenguaje de programación empleado; además, dependen también de la experiencia y las habilidades que tenga cada programador, de forma que, si la intención es determinar el tamaño para poder estimar por ejemplo el coste del proyecto, es necesario que se empleen medidas más fiables que las descritas.</p> 
+			<p>Teniendo en cuenta lo anterior, se han creado estándares internacionales que permiten calcular el tamaño funcional de un proyecto de TI; en particular, el estándar ISO/IEC 14143-1:2007, creado por la organización internacional ISO/IEC, que contiene una serie de métodos de recuento que hacen posible determinar el tamaño de un proyecto dado.</p>
+			<p>Estas mediciones del estándar se basan en el cálculo de los puntos función (PF). Este método sostiene que todos los requisitos funcionales de un producto software pueden ser enmarcados en alguno de estos cinco tipos:</p>
+			<ul class="content">
+			    <li>Salidas</li>
+			    <li>Consultas</li>
+			    <li>Entradas</li>
+			    <li>Ficheros internos</li>
+			    <li>Interfaces externas</li>
+			</ul>
+			<p>Un PF representa una unidad estándar de medida, asociada al tamaño funcional de una aplicación de software. Los proyectos se pueden medir con unidades; de forma similar a como calculamos el volumen de un cubo en cm3, o el diámetro de una circunferencia en m, el tamaño de una aplicación se mide por el número de PF (Albretch y Gaffney, 1983).</p>
+			<p>El éxito de la técnica de los puntos de función radica en que esta métrica es fiable para calcular el tamaño del proyecto porque:</p> 
+			<ul>
+			    <li>1) El tamaño y la funcionalidad de la aplicación se miden desde el punto de vista del usuario. Así, el gerente toma en cuenta las demandas del usuario, tales como pantallas donde se realizan las entradas de datos o informes de salida. La técnica se basa en el conocimiento, por parte de los usuarios, de los datos que deben ser almacenados y procesados por el sistema.</li> 
+			    <li>2) La técnica es independiente de la tecnología. No importa el lenguaje de programación que se use, el análisis se hace con base en las pantallas y las tablas de datos, y de allí se deriva el número de PF necesarios. </li>
+			    <li>3) La técnica tiene un coste, clasificado desde bajo hasta moderado. De acuerdo con ciertas estadísticas, emplear la técnica de PF en un proyecto supone un incremento del coste como máximo del 1%.</li>
+			    <li>4) La técnica FP es repetible, ya que diversos contadores de PF pueden medir de forma separada la misma aplicación, con un margen poco considerable de diferencia entre unos  y otros. </li>
+			</ul>
+			<p>Considerando su carácter de estándar internacional, y también las características de la métrica (señaladas en el párrafo anterior), muchos gerentes de proyectos la han adoptado porque presenta las siguientes ventajas adicionales:</p>
+			<div class="media-content right">
+			    <div class="media"><a class="retina" href=""><img src="../images/" alt=""></a></div>
+			    <div class="spacer" style="height:5px;"></div>
+			    <div class="description">Figura 2. Ventajas del uso de PF en un proyecto<br/>Fuente: Elaboración propia a partir de Aemes (2010)</div>
+			</div>
+			<p>Así, el coste de desarrollo de software por cada PF varía, dependiendo de la tecnología utilizada, del tamaño del proyecto, de los requisitos de calidad exigidos y de otros parámetros, pero en general la media está en 11,35 horas-hombre por punto función (Wikipedia, 2012).</p>
+			<div class="resumen">
+			    <div class="resumenicono"></div>
+			        <h3>Resumen:</h3>
+			            <p>Una de las medidas más empleadas para calcular el tamaño de un proyecto informático son los puntos de función, estándar internacional creado por ISO/IEC, que se basa en el cálculo de salidas, entradas, consultas, ficheros internos e interfaces externas de un proyecto. Los gerentes de proyectos se apoyan en el cálculo de los mismos, ya que su medición es de bajo coste, la técnica es independiente de la tecnología empleada y además es repetible, lo cual facilita diversas mediciones del mismo proyecto con fines de verificación de las mediciones.</p>
+			</div>
+			<p>Para ver con más detalle la forma de medir los PF, es necesario aclarar que esta técnica consiste en asignar puntos de acuerdo con la complejidad de los datos que una aplicación maneja, y también con base en la complejidad de los procesos que realiza sobre ellos. El proceso anterior siempre se debe llevar a cabo desde el punto de vista del usuario y no del programador o del gerente. En eso se apoyan las premisas fundamentales de esta métrica. De esta forma, los PF miden el tamaño lógico o funcional de los proyectos o aplicaciones de software, basados en los requerimientos funcionales del usuario.</p>
+			<p>Una guía muy útil acerca de cómo calcular los PF la provee el International Function Point Users Group (IFPUG, 2012). A continuación se relacionan algunos pasos-resumen de los propuestos por esta organización.</p>
+			<table>
+			    <tr>
+			        <td>
+			            <p>Determinar el tipo de recuento</p>
+			        </td>
+			        <td>
+			            <p>¿Se trata de un proyecto?</p>
+			            <p>¿Una mejora?</p>
+			            <p>¿Una aplicación ya instalada?</p>
+			            <p>Existen diferencias en cada caso. Puede tratarse de funciones de conversión, modificación y baja de funcionalidad, y cada una arrojará una medida distinta de PF.</p>
+			        </td>
+			    </tr>
+			    <tr>
+			        <td>
+			            <p>Identificar el alcance y los límites</p>
+			        </td>
+			        <td>
+			            <p>Definir con exactitud hasta dónde se quiere medir.</p>
+			        </td>
+			    </tr>
+			    <tr>
+			        <td>
+			            <p>Contar las funciones de datos</p>
+			        </td>
+			        <td>
+			            <p>Desde el punto de vista de un usuario, se contabilizan los ficheros lógicos empleados, tanto internos a la aplicación, como externos a ella. Para cada fichero se cuenta el número de datos y de registros lógicos.</p>
+			            <p>Con el número resultante se calcula un índice de complejidad para cada fichero, y posteriormente, una cantidad de PF.</p>
+			        </td>
+			    </tr>
+			    <tr>
+			        <td>
+			            <p>Contar las funciones transaccionales</p>
+			        </td>
+			        <td>
+			            <p>Desde el punto de vista de un usuario, se contabilizan los procesos del sistema. Se hacen distinciones entre entradas, salidas y consultas. Dependiendo de los ficheros que maneja cada proceso y de la naturaleza misma del proceso, se calculan los PF asociados.</p>
+			        </td>
+			    </tr>
+			    <tr>
+			        <td>
+			                <p>Hacer recuento bruto de PF</p>
+			        </td>
+			        <td>
+			            <p>Se hace una sumatoria de los PF obtenidos hasta ese momento a partir de los pasos anteriores. Comúnmente a este recuento se denomina: <span class="cita">unadjusted PF.</span></p>
+			        </td>
+			    </tr>
+			    <tr>
+			        <td>
+			            <p>Determinar el factor de ajuste</p>
+			        </td>
+			        <td>
+			            <p>Este factor se calcula con base en 14 características generales del sistema, que se valoran en una escala<span class="cita">likert</span> de 0.5.</p>
+			        </td>
+			    </tr>
+			    <tr>
+			        <td>
+			            <p>Calcula</p>
+			        </td>
+			        <td>
+			            <p>Aplicando el factor de ajuste al recuento bruto, se obtiene el recuento ajustado.</p>
+			        </td>
+			    </tr>
+			</table>
+			Cuadro 2. Principales pasos para calcular los PF
+			Fuente: IFPUG.
+			<p>En el mercado existe un número de instrumentos que permite calcular el tamaño de un proyecto mediante la técnica de PF. En este caso, el instrumento que se provee para que el estudiante explore la técnica se encuentra en el siguiente link:</p>
+			<div class="media-content left">
+			    <div class="media"><a class="retina" href=""><img src="../images/" alt=""></a></div>
+			    <div class="spacer" style="height:5px;"></div>
+			    <div class="description">Instrumento 3. - 3 puntos de función<br/>Fuente:</div>
+			</div>
+			
+			
+			<p>El instrumento está desarrollado en Excel, a partir de ponderaciones construidas por la Fundación Universitaria Konrad Lorenz (www.fukl.edu), y empleando la metodología de los PF (Albretch y Gaffney, 1983). La hoja Excel permite calcular tanto los puntos de función no ajustados como los ajustados, y el esfuerzo en términos de líneas de código y de horas / hombre por emplear.</p>
+			<p>El esquema de trabajo con la hoja es el siguiente (figura 3):</p>
+			<div class="media-content right">
+			    <div class="media"><a class="retina" href=""><img src="../images/" alt=""></a></div>
+			    <div class="spacer" style="height:5px;"></div>
+			    <div class="description">Figura 3. Cálculo de puntos de función por elementos<br/>Fuente: Elaboración propia</div>
+			</div>
+			<p>Para cada uno de los apartados del sistema por evaluar:</p>
+			<ul>
+			    <li>a)  Entradas</li>
+			    <li>b)  Salidas</li>
+			    <li>c)  Consultas</li>
+			    <li>d)  Archivos</li>
+			    <li>e)  Interfaces</li>
+			</ul>
+			<p>se debe analizar si su complejidad es alta, media o baja, y para ello se requiere usar las ayudas de la hoja Excel. Por ejemplo:</p> 
+			<p>Siempre, en los recuadros verdes, se ha de indicar el número de entradas del sistema. Si las mismas corresponden a menos de dos ficheros accedidos, con menos de cinco atributos totales, entonces debe clasificarlo como entradas de complejidad baja, y escribir el número de esas entradas en la celda verde correspondiente.</p>
+			<p>Si el sistema cuenta con hasta dos ficheros accedidos, con máximo 15 atributos, entonces debe señalarlo como de complejidad media, y escribir el número de entradas en la celda correspondiente a entradas de complejidad media.</p>
+			<p>Finalmente, si el sistema cuenta con más de dos ficheros accedidos, con más de 15 atributos, entonces deberá colocar el número de entradas en la celda verde correspondiente a entradas de complejidad alta.</p>
+			<p>La hoja de Excel automáticamente calculará el subtotal por elementos en la columna de la derecha, y para cada elemento (entradas, salidas, consultas, archivos, interfaces), el sistema brinda una ayuda (comentarios) en el lado derecho de las celdas.</p>
+			<p>Por otra parte, para el cálculo de los factores de corrección (ver figura 4), se ofrece una escala Likert de 0 - 5, con el fin de calificar aspectos tales como: comunicaciones de datos, velocidad de transacción, facilidad de instalación, etc. Se debe calificar de 0 - 5, donde 0 = Sin efecto en la complejidad del procesado, y 5 = Gran efecto en la complejidad del procesado. La hoja de Excel calcula automáticamente el ajuste de complejidad técnica (ACT).</p>
+			<div class="media-content left">
+			    <div class="media"><a class="retina" href=""><img src="../images/" alt=""></a></div>
+			    <div class="spacer" style="height:5px;"></div>
+			    <div class="description">Figura 4. Cálculo de puntos de función Ajuste de complejidad técnica<br/>Fuente: Elaboración propia</div>
+			</div>
+			<p>Finalmente, se debe ingresar en la hoja el número de líneas de código del sistema en la celda indicada para ello, y también las horas/hombre por punto función, de acuerdo con la tabla que se encuentra dentro de la misma hoja de Excel, es decir:</p>
+			<ul class="content">
+			    <li>Para lenguajes 2GL  25 horas por punto función</li>
+			    <li>Para lenguajes 3GL  15 horas por punto función</li>
+			    <li>Para lenguajes 4GL  8 horas por punto función</li>
+			</ul>
+			<div class="media-content right">
+			    <div class="media"><a class="retina" href=""><img src="../images/" alt=""></a></div>
+			    <div class="spacer" style="height:5px;"></div>
+			    <div class="description">Figura 5. Cálculo de puntos de función. Cálculo del esfuerzo<br/>Fuente: Elaboración propia</div>
+			</div>
+			<p>Para cerrar este apartado, cabe mencionar que los PF tienen una mayor utilidad, es decir, son más fiables, si se calculan a partir de una adecuada especificación de requerimientos. Así, cuando se parte de una base mal establecida, tal como unos requerimientos vagos o mal formulados, no se puede esperar que el cálculo de los PF arroje resultados seguros.</p> 
+		</div>
+	</body>
+</html>
