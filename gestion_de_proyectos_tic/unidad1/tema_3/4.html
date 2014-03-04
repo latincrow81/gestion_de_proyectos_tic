@@ -1,0 +1,12 @@
+<h3>3.4	La administración de requerimientos por medio de casos de uso</h3>
+	<p>Dada la importancia que han cobrado los casos de uso durante los últimos años, se ha decidido dedicar un apartado completo a esta técnica de administración de requerimientos. Los casos de uso son una técnica para especificar el comportamiento de un sistema. Como lo expresan McMenamin y Palmer (1984), “un caso de uso es una secuencia de interacciones entre un sistema y alguien o algo que usa alguno de sus servicios”.</p> 
+	<p>En la vida diaria, un sistema se comunica con su entorno mediante una serie de servicios que el sistema ofrece. Un caso de uso es una técnica que permite expresar cómo alguien o algo externo a un sistema lo usa. Cuando se hace referencia a “algo”, es básicamente debido a que los sistemas son usados por personas, pero también por otros sistemas. </p>
+	<p>Por ejemplo, un sistema de registro de ensayos de laboratorio debe ofrecer un servicio para ingresar una nueva solicitud de ensayo, así, cuando un usuario accede a este servicio, se puede decir que está “ejecutando” el caso de uso o “ingresando solicitud de ensayo”.</p>
+	<p>Los casos de uso tienen su origen en Jacobson et al. (1992). Sin embargo, los precursores de esta idea fueron realmente McMenamin y Palmer (1984), quienes introdujeron el concepto de evento. Un evento es, según estos últimos autores, algo que ocurre fuera de los límites del sistema, y ante lo cual el sistema debe responder. Para dar continuidad al ejemplo anterior, en el sistema de ensayos de laboratorio ocurre un evento externo: “cliente solicita ensayo”, ante lo cual el sistema deberá responder.</p>
+	<p>Para tener en cuenta:</p>
+	<p>Los casos de uso difieren de los eventos en que:</p> 
+	<ul class="content">
+		<li>Los eventos describen qué hace el sistema cuando el evento ocurre. Los casos de uso describen cómo es el diálogo entre el usuario y el sistema.</li>
+		<li>Los eventos son “atómicos”: se recibe una entrada, se la procesa y se genera una salida. Los casos de uso se prolongan a lo largo del tiempo mientras dure la interacción del usuario con el sistema. Un caso de uso puede agrupar varios eventos.</li>
+		<li>Para los eventos lo importante es qué datos ingresan al sistema o salen de él cuando ocurre el evento (estos datos se llaman datos esenciales), mientras que para los casos de uso la importancia del detalle sobre la información que se intercambia es secundaria.</li> 
+	</ul>

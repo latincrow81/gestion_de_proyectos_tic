@@ -1,0 +1,65 @@
+3.2	Conceptos básicos e importancia de la ingeniería de requerimientos (IR)
+El proceso de recopilar, analizar y verificar las necesidades del cliente para un sistema determinado es llamado ingeniería de requerimientos (IR), y su meta es entregar una especificación de requisitos de software correcta y completa (Sommerville, 2005). Otra definición habla de la IR como “el proceso por el cual se transforman los requerimientos declarados por los clientes, ya sean hablados o escritos, a especificaciones precisas, no ambiguas, consistentes y completas del comportamiento del sistema, incluyendo funciones, interfaces, rendimiento y limitaciones” (Senn, 1992). 
+Tanto los expertos en ingeniería del software como los gerentes más experimentados de proyectos de TI coinciden en afirmar que los requerimientos (también llamados requisitos por ciertos autores) son un aspecto clave en el desarrollo del software, ya que son la base de todas las actividades de planificación que el gerente debe hacer con respecto al proyecto. La planificación que se elaborará con base en la definición de requerimientos incluye aspectos relacionados con la estimación de costes, de personal, de recursos requeridos, entre otros. Por otra parte, poder medir si se alcanzaron los objetivos del proyecto también se hace posible por medio de la definición de requerimientos, ya que en ellos quedaron plasmadas todas las necesidades del cliente, y es frente a estos requerimientos sobre los cuales se puede contrastar si se alcanzan las metas trazadas.
+Este proceso de definición de requerimientos es erróneamente omitido por algunos gerentes de proyectos quienes, ante eventos como el hecho de que una plataforma obsoleta se tenga que reemplazar con celeridad, la inminente compra de sistemas totalmente nuevos, o el desarrollo de proyectos en un calendario muy ajustado, e incuso irreal, hacen que en ocasiones los gerentes se “salten” ciertos pasos importantes de la definición de requerimientos, causando mayores problemas al sistema en cuestión.
+Para tener en cuenta (EL FORMATO DE ESTE TEXTO RESALTADO):
+Algunas investigaciones recientes concluyen que cerca del 53% de los proyectos de software fracasan por no realizar un estudio previo de requisitos. Otros factores como falta de participación del usuario, requerimientos incompletos y el cambio a los requerimientos, también ocupan posiciones altas en los motivos de fracasos. 
+The Chaos Report, 2008.
+
+Antes de desarrollar la importancia de esta actividad, es necesario ahondar en definiciones básicas. La primera de ellas: los requerimientos. ¿Qué son en concreto los requerimientos? De acuerdo con la IEEE (IEEE, 1998) un requerimiento representa:
+1.	Una condición o necesidad de un usuario para resolver un problema o alcanzar un objetivo. 
+2.	Una condición o capacidad que debe estar presente en un sistema o componentes de un sistema para satisfacer un contrato, estándar, especificación u otro documento formal. 
+3.	Una representación documentada de una condición o capacidad como en los puntos 1, o 2.
+
+En cuanto a su tipología, los requerimientos pueden dividirse en dos: funcionales y no funcionales. 
+Los requerimientos funcionales definen las funciones que el sistema será capaz de realizar, describen las transformaciones que el sistema realiza sobre las entradas para producir salidas. 
+Por su parte, los requerimientos no funcionales tienen que ver con características que —de una u otra forma— puedan limitar el sistema, como por ejemplo el rendimiento (en tiempo y espacio), las interfaces de usuario, la fiabilidad (robustez del sistema, disponibilidad de equipo), el mantenimiento, la seguridad, la portabilidad y los estándares, entre otros (Wiegers, 2003). 
+Para tener en cuenta:
+Algunos ejemplos de requisitos funcionales de un sistema pueden ser:
+•	Se deben poder realizar búsquedas con base en diferentes criterios.
+•	Se deben proporcionar diferentes visores para que el usuario lea los documentos recuperados. 
+•	Cada factura debe tener un número único y correlativo y la fecha.
+
+Ejemplos de requisitos no funcionales pueden ser:
+•	Se utilizará en todas las comunicaciones el conjunto de caracteres ADA estándar.
+•	El sistema se debe desarrollar de acuerdo con el proceso estándar XYZCo-SP-STAN-95.
+•	El sistema no divulgará a los operadores ninguna información personal sobre los clientes, aparte de su nombre y su número de referencia.
+
+Por otra parte, cuando se habla de características de los requerimientos (figura 5), se hace referencia a sus propiedades principales. La situación ideal es que un requerimiento se encuentre suficientemente detallado, y para ello las condiciones son: 
+•	El requerimiento es necesario. Para decidir si un requerimiento es necesario el gerente debe preguntarse: ¿qué pasaría si se omite este requerimiento? Si la respuesta a esta pregunta genera una deficiencia en el sistema a construir, o en su capacidad de respuesta al problema que intenta solucionar, o en sus características físicas, entonces el requerimiento es necesario.
+•	El requerimiento es conciso. Si una persona ajena al proyecto es capaz de leer y entender ese requerimiento, entonces puede decirse que este es conciso. Para lograr sumar esta característica, se debe pensar en una redacción simple y clara. Además, es frecuente que los requerimientos, una vez documentados, sean objeto de consulta por parte de diferentes stakeholders, así que elaborar requerimientos concisos es fundamental en IR.
+•	El requerimiento es completo. Un requerimiento está completo si se proporciona la información suficiente para su comprensión, y no necesita ampliar detalles en su redacción.
+•	El requerimiento es consistente. El gerente del proyecto debe revisar que no existan contradicciones entre uno y otro requerimiento dentro del sistema.
+•	El requerimiento no es ambiguo. Un requerimiento está libre de ambigüedades cuando sólo es posible una única interpretación. Si dos usuarios diferentes leen el mismo requerimiento y obtienen dos interpretaciones diferentes, entonces es necesario revisar posibles ambigüedades. 
+•	El requerimiento es verificable. Esto ocurre cuando el requerimiento puede someterse a inspección, análisis, demostración o pruebas y continúa siendo válido.
+ 
+Figura 5. Características de los requerimientos.
+Fuente: Adaptación de Senn, 1992
+
+Resumen de los conceptos de la IR
+El proceso de recopilar, analizar y verificar las necesidades del cliente para un sistema determinado es llamado ingeniería de requerimientos (IR), y su meta es entregar una especificación de requisitos de software correcta y completa (Sommerville, 2005). 
+Los requerimientos pueden ser básicamente de dos tipos: funcionales y no funcionales, y entre sus características primordiales se encuentran: debe ser consistente, no ambiguo, verificable, conciso y necesario.
+
+A pesar de que las características de un buen requerimiento están claramente definidas, y son muchos los autores que han ahondado sobre la propuesta inicial de Senn (1992), en el entorno real de la empresa aún se presentan ciertas dificultades para definir los requerimientos, las cuales se podrían resumir de la siguiente forma:
+•	Los requerimientos provienen de muchas fuentes, de manera que en ocasiones varios usuarios tienen algo que decir acerca del mismo requerimiento, lo que dificulta la labor del gerente. La cantidad de fuentes entonces puede hacer difícil la conciliación y, por tanto, una buena definición.
+•	Muchas veces es difícil expresar con palabras todo lo que el usuario quiere obtener. El lenguaje tiene esas limitaciones intrínsecas a él mismo.
+•	En un mismo proyecto de TI coexisten varios tipos de requerimientos. El nivel de complejidad crece con el tamaño del proyecto y con el nivel de detalle que el gerente quiera imprimirle a sus requerimientos. 
+•	Cada requerimiento tiene sus propias características en cuanto a nivel de riesgo asociado, a estabilidad o a nivel de detalle. Las características diferenciadoras hacen de la labor de la IR una actividad laboriosa y de cuidado.
+•	En la IR se crea una red de requerimientos relacionados unos con otros, y que cubren diferentes procesos al mismo tiempo, solapándose constantemente; así, la red construida por ellos es —en ocasiones— difícil de entender, o al menos es un aspecto que requiere dedicación al momento de su especificación para evitar cometer errores asociados con la complejidad de la red de requerimientos.
+•	Cada requerimiento tiene propiedades únicas y abarcan áreas funcionales específicas.
+•	Durante el desarrollo del sistema es frecuente que ciertos requerimientos cambien su alcance, modifiquen incluso sus características o el objetivo mismo. Esto también contribuye a aumentar la complejidad de la gestión de los requerimientos. 
+•	Los requerimientos son difíciles de cuantificar.
+BUSCAR IMAGEN DE UNA PERSONA EXPLICANDO ALGO A UN GRUPO DE COMPAÑEROS. LA IMAGEN PUEDE TENER LUGAR EN UNA OFICINA... 
+
+A pesar de las dificultades descritas anteriormente, el panorama no debe ser desalentador para el gerente. Con todas las dificultades descritas, el hecho de realizar un buen trabajo de IR ofrece unas ventajas que sin lugar a dudas sobrepasan —con creces— el esfuerzo invertido en la correcta especificación.
+Los principales beneficios que se obtienen con la IR se pueden resumir de la siguiente forma (Herrera, 2012): 
+•	Una adecuada IR permite gestionar las necesidades del proyecto de manera estructurada. Cada actividad de la IR consiste de una serie de pasos organizados y bien definidos.
+•	La IR mejora la capacidad de predecir tanto los cronogramas de proyectos como sus resultados, ya que proporciona un punto de partida para controles subsecuentes y para actividades de mantenimiento, tales como estimación de costes, tiempo y recursos necesarios.
+•	La IR disminuye los costes y retrasos del proyecto. En esto coinciden muchos estudios que han demostrado que reparar errores por un mal desarrollo basado en un requerimiento inadecuado y no descubierto a tiempo resulta sumamente costoso.
+•	Hacer IR mejora la calidad del software, puesto que esta tiene que ver con cumplir un conjunto de requerimientos (funcionalidad, facilidad de uso, confiabilidad y desempeño, entre otros).
+•	La IR tiene la capacidad de mejorar la comunicación entre equipos, puesto que motiva el consenso entre clientes y desarrolladores. Si este consenso no ocurre, el proyecto no será exitoso.
+•	La IR evita rechazos de usuarios finales ya que fuerza al cliente a considerar sus requerimientos cuidadosamente y revisarlos dentro del marco del problema, por lo que se le involucra durante todo el desarrollo del proyecto.
+
+Para tener en cuenta:
+La IR involucra a un importante número de actores. Así, no sólo se compromete el equipo del proyecto, sino que al mismo tiempo un conjunto de personas dentro de la organización deben formar parte de este proceso, aportando cada uno su conocimiento. Es labor del director de proyecto involucrar a las personas correctas en las diferentes fases del ciclo de vida, y en las diferentes actividades de la IR. Los roles más importantes dentro de la IR son: usuario final, usuario líder, personal de mantenimiento, analistas y programadores y personal de prueba. 
+Otras personas que pueden estar involucradas, dependiendo de la magnitud del proyecto, pueden ser: administradores de proyecto, documentadores, diseñadores de base de datos, entre otros.

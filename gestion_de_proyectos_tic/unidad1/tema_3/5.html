@@ -1,0 +1,157 @@
+<h3>3.5	Importancia de los casos de uso</h3> 
+	<p>A partir de la difusión del trabajo de Jacobson et al. (1992), la notación de los casos de uso fue incorporada al lenguaje estándar de modelado UML, que está avalado por las principales empresas que desarrollan software en el mundo.</p> 
+	<p>A pesar de ser considerada una técnica de análisis orientado a objetos, los casos tienen poco que ver con entender un sistema como un conjunto de objetos que interactúan (que es la premisa básica del análisis orientado a objetos “clásico”). En este sentido, el éxito de los casos de uso se apoya en el análisis estructurado, que propone, como se mencionó anteriormente, que la mejor forma de empezar a entender un sistema es a partir de los servicios que este ofrece a su entorno, independientemente de los objetos que interactúan dentro del sistema para proveerlos.</p>
+	<p>De acuerdo con muchos expertos, es probable que en el futuro los métodos de análisis y diseño que prevalezcan sean aquellos que adopten las principales ventajas de todos los métodos disponibles en la actualidad (estructurados, métodos formales, métodos orientados a objetos, etcétera). </p>
+	<h4>3.5.1	Principales conceptos en la técnica de casos de uso (CU)</h4>
+		<p>A continuación se describen los principales conceptos que se utilizan en la técnica de casos de uso, con el propósito de que el estudiante se familiarice con ellos y posteriormente los aplique en casos reales. Los conceptos incluidos aquí se basan en las primeras definiciones de McMenamin y Palmer (1984), que posteriormente han sufrido algunas adaptaciones de otros autores, entre ellos Jacobson et al. (1992), y sobre los que muchos académicos han hecho eco en trabajos posteriores, un número importante de ellos disponibles en la red (Ceria, 2012; Cabrera, 2008; Gracia, 2003), entre otros.</p>
+		<h5>3.5.1.1 Actores</h5>
+			<p>Identificar a los actores es el primer paso para usar la técnica de casos de uso. Un actor es una agrupación uniforme de personas, sistemas o máquinas que interactúan con el sistema que se construye. Por ejemplo, para un departamento de atención telefónica al cliente, que recibe llamadas, todos los operadores que reciban solicitudes en forma de llamadas, y las ingresen en un sistema, si pueden hacer las mismas cosas con el sistema, son considerados un único actor: “Operador de atención telefónica”. Los actores son externos al sistema que se va a desarrollar.</p> 
+			<p>Puede ocurrir que el actor sea una máquina. Esto ocurre si el software controla los movimientos de la máquina, o es operado por una máquina. Por ejemplo, si se habla de un control automático de llenado de un tanque de hidrocarburo, y asumiendo que nuestro sistema controla las rutinas para el llenado del tanque, el tanque será un actor.</p>
+			<p>En la técnica de CU, los actores se representan con dibujos simplificados de personas. En cuanto a las flechas, pueden usarse para indicar el flujo de información entre el sistema y el actor. Si la flecha apunta del actor hacia el sistema, esto indica que el actor está ingresando información en el sistema. Si la flecha apunta del sistema hacia el actor, el sistema está generando información para el actor.</p>
+		<h5>3.5.1.2 Caso de uso</h5>
+			<p>Es una secuencia de interacciones entre un sistema y alguien o algo que usa alguno de sus servicios. Un caso de uso es iniciado por un actor. A partir de ese momento, ese actor, junto con otros actores, intercambian datos o control con el sistema, participando de ese caso de uso.</p>
+			<p>El nombre de un caso de uso se expresa con un verbo en gerundio, seguido generalmente por el principal objeto o entidad del sistema que es afectado por el caso. Gráficamente, los casos de uso se representan con un óvalo, con el nombre del caso en su interior.</p>
+		<h5>3.5.1.3 Extensiones</h5>
+			<p>En algunas oportunidades, los CU incluyen un conjunto de pasos que ocurren sólo en algunas oportunidades. En estas oportunidades se dice que el caso de uso1 extiende el caso de uso2 y se representa por una línea de trazos desde el caso que “extiende a” el caso que es “extendido”.</p>
+			<p>Las extensiones tienen las siguientes características:</p>
+			<ul class="content">
+				<li>Representan una parte de la funcionalidad del caso que no siempre ocurre.</li>
+				<li>Son un caso de uso en sí mismas.</li>
+				<li>No necesariamente provienen de un error o excepción.</li> 
+			</ul>
+		<h5>3.5.1.4 Usos</h5>
+			<p>Una ocurrencia frecuente es que la misma funcionalidad del sistema sea accedida a partir de varios CU. Por ejemplo, la funcionalidad de buscar un ensayo de laboratorio puede ser accedida desde el ingreso de ensayos, desde las consultas de ensayos existentes, o desde los informes de solicitudes por ensayo. A esto se denomina relaciones de uso.</p>
+			<p>Así pues, las características de las relaciones de uso son:</p>
+			<ul class="content">
+				<li>Aparecen como función común, a posteriori de la especificación de varios casos de uso.</li>
+				<li>Los casos usados son casos de uso en sí mismos.</li>
+				<li>El caso es usado siempre que el caso que lo usa se ejecuta. Esto marca la diferencia con las extensiones, que son opcionales.</li>
+			</ul>
+		<h5>3.5.1.5 Abstracción</h5>
+			<p>Cuando se identifican relaciones de uso y de extensión, puede ocurrir que se encuentren casos de uso que son accedidos por varios actores. Por ejemplo, el caso de uso “buscando datos de ensayo” es accedido por muchos actores (el técnico de laboratorio, que ingresa una solicitud, el director del laboratorio que quiere obtener estadísticas por ensayo, la secretaria, que quiere consultar la información de algún ensayo, etcétera). Ahora bien, como el caso de uso nunca se ejecuta fuera del contexto de otro caso de uso, se denomina caso de uso abstracto. Se denomina así porque no se puede implementar por sí mismo: sólo tiene sentido como parte de otros casos.</p>
+			<p>De la misma manera, el actor que participa de este caso de uso, que reúne características comunes a todos los actores de los casos de uso que lo utilizan, es un actor abstracto. En nuestro ejemplo, podemos decir que tenemos un actor abstracto “Buscador de datos de ensayo”. Los actores abstractos, entonces, son necesarios para no dejar sin actores a los casos de uso abstractos.</p>
+		<h5>3.5.1.6 Herencia</h5>
+			<p>Las relaciones entre actores abstractos con actores concretos también son posibles por medio del concepto de herencia. Como todos los actores concretos también ejecutan el caso “buscando datos de ensayo”, a través de la relación de uso, se puede decir que los actores concretos heredan al actor abstracto. La relación de herencia no necesariamente implica la existencia de un caso abstracto. Puede ocurrir que un actor ejecute todos los casos que ejecuta otro actor, y algunos más.</p> 
+			<p>Algunos ejemplos de diagramas de casos de uso se presentan en la figura 8.</p>
+			<div class="media-content right">
+				<div class="media"><a class="retina" href=""><img src="../images/" alt=""></a></div>
+				<div class="spacer" style="height:5px;"><!-- separador --></div>
+				<div class="description">Figura 8. Ejemplo de un caso de uso<br/>Fuente: elaboración propia</div>
+			</div>	
+			<p>No obstante lo anterior, algunos autores afirman que en el análisis de casos de uso los diagramas no son verdaderamente importantes (Gracia, 2003), o al menos no lo son tanto como el documento que describe los casos de uso. En este documento se explica la forma de interactuar entre el sistema y el usuario. Por ejemplo, un documento de caso de uso podría ser el se presenta en la tabla 2.</p> 
+			<table>
+				<tr>
+					<td>
+						<p>Nombre</p>
+					</td>
+					<td>
+						<p>Generar nuevo ensayo</p>
+					</td>
+				</tr>
+				<tr >
+					<td>
+						<p>Autor</p>
+					</td>
+					<td>
+						<p>Lenderino ómez</p>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<p>Fecha</p>
+					</td>
+					<td>
+						<p>11 enero de 2010</p>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<p>Descripción</p>
+					</td>
+					<td>
+						<p>Permite crear un nuevo ensayo</p>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<p>Actores</p>
+					</td>
+					<td>
+						<p>Técnico de laboratorio</p>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<p>Precondiciones</p>
+					</td>
+					<td>
+						<p>El actor debe haberse identificado en el sistema.</p>
+						<p>El cliente debe existir en la base de datos.</p>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<p>Flujo normal</p>
+					</td>
+					<td>
+						<p>El técnico pulsa el botón de "crear ensayo"</p>
+						<p>El sistema le pide el código del cliente y verifica que el cliente exista.</p>
+						<p>A continuación le pide los datos del ensayo y el usuario los digita.</p>
+						<p>El sistema almacena los datos.</p>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<p>Flujo alternativo</p>
+					</td>
+					<td>
+						<p>Si el cliente no existe, el sistema le avisa al técnico y lo lleva al módulo de crear nuevo cliente.</p>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<p>Condiciones posteriores</p>
+					</td>
+					<td>
+						<p>La información del ensayo queda almacenada en el sistema.</p>
+					</td>
+				</tr>
+			</table>
+			<div class="description">Tabla 2. Documento de caso de uso<br/>Fuente: adaptación de Gracia, 2003</div>
+	<h4>3.5.2	Pasos para aplicar los casos de uso a la ingeniería de requerimientos</h4>
+		<p>Llegados a este punto es importante ofrecer al estudiante una guía práctica para implementar los casos de uso, dado que tendrá que enfrentarse con problemas de carácter real en la industria. Así, a continuación se ofrecen consejos a seguir en este proceso.</p>
+		<h5>3.5.2.1 Identificar a los actores</h5>
+			<p>El analista, o el gerente del proyecto en su caso, deberá identificar a los actores, para lo cual es útil preguntarse por ejemplo: ¿Quién usará este sistema? ¿Quién proporciona sus entradas y quién leerá sus salidas? En términos de los casos de uso, estos serían los actores. Quien desee que sus requerimientos estén bien especificados, deberá prestar atención en primer lugar a la identificación de los actores. Por tanto, antes de avanzar con los casos de uso, se deben identificar todos los tipos de usuarios diferentes que tiene, o que tendrá el sistema. Igualmente, se debe indagar cuáles áreas de la empresa serán afectadas, o usarán, o actualizarán la información de este.</p>
+			<p>También es indispensable tener en cuenta que los usuarios identificados al inicio, probablemente no serán los mismos que al finalizar el sistema, debido a la naturaleza cambiante de requerimientos, del entrono y del mismo sistema. De esta manera, el gerente del proyecto debe hacer un esfuerzo inicial, y a medida que se va avanzando en la descripción de los casos de uso y se van conociendo más detalles del sistema, el número de usuarios puede ir cambiando.</p>
+		<h5>3.5.2.2 Identificar los principales CU de cada actor</h5>
+			<p>Una vez identificados los actores, el siguiente paso es enunciar los nombres de los principales casos de uso de cada uno de ellos. Probablemente al inicio de este ejercicio el gerente se dé cuenta de que no aparecen muchos CU. Este hecho no es preocupante ya que: 1) ocurre con frecuencia, y 2) existen técnicas para encontrar nuevos CU a partir de los existentes.</p>
+		<h5>3.5.2.3 Identificar nuevos CU a partir de los existentes</h5>
+			<p>Como se mencionó en el apartado anterior, el gerente puede haber omitido algunos CU. No se recomienda pasarlos por alto, ya que puede significar omitir algún requerimiento del sistema y puede consecuentemente acarrear fallos posteriores. En ese momento es útil formularse las siguientes preguntas (adaptado de Herrera, 2012):</p> 
+			<ul class="content">
+				<li>¿Cuáles son las tareas del actor Nº 1., Nº 2,...?</li>
+				<li>¿El actor Nº “n” necesita estar informado de la ocurrencia del evento “x” del sistema?</li>
+				<li>¿El actor Nº n necesita informar al sistema de cambios externos inesperados?</li>
+				<li>¿Todos los requerimientos funcionales pueden ser desarrollados por los casos de uso?</li>
+				<li>¿Qué casos de uso soportarán y mantendrán al sistema?</li>
+				<li>¿Qué información debe ser modificada o creada?</li>
+			</ul>
+		<!-- BUSCAR IMAGEN DE PERSONA TRABAJANDO CON PAPELES SOBRE LA MESA -->
+		<h5>3.5.2.4 Documentar los CU</h5>
+			<p>Tal como ocurre con los requerimientos, los casos de uso deben quedar perfectamente documentados. Esta tarea se inicia una vez identificados todos ellos. Se debe crear un documento por cada CU.</p> 
+			<p>El estudiante puede tomar como modelo la descripción del CU realizado en la tabla 2 de este documento.</p> 
+		<h5>3.5.2.5 Definir prioridades</h5>
+			<p>Cuando se ha completado la documentación de los CU, se recomienda definir las prioridades de los distintos requerimientos, expresados como CU. 
+		<h5>3.5.2.6 Realizar gráficos</h5>
+			<p>Aunque este paso no es imprescindible, muchos analistas sí lo realizan con frecuencia. Una cosa es importante recordar: los gráficos están pensados para aclarar y no para confundir. De esta manera, si el sistema es muy grande, es probable que los gráficos se vayan complicando en cuanto se vayan incluyendo más CU, actores y relaciones. Así, un conjunto de consejos útiles en este proceso son:</p> 
+			<ul class="content">
+				<li>Un gráfico de casos de uso no debe mostrar más de 15 casos.</li>
+				<li>Si es necesario partir el gráfico, debe hacerse por actor. La primera partición debe separar los casos centrales de los casos auxiliares, ya que probablemente les interesen a personas distintas.</li>
+				<li>Si las relaciones de uso y las extensiones entran en el diagrama principal, sin dejar de cumplir con la primera recomendación, se deben dejar en ese mismo lugar. Igual condición se aplica a los actores abstractos.</li>
+				<li>Si las relaciones de uso no entran en el diagrama principal, se deben presentar en gráficos teniendo en cuenta que siempre se deben mostrar todos los CU que usan a otro, en un mismo diagrama.</li>
+				<li>Si se dispone de un CU que es usado por gran parte de los otros casos, como por ejemplo el caso de uso “haciendo log-in”, se debe evitar mostrarlo en el gráfico principal, ya que las flechas serán imposibles de organizar. Es probable que no haga falta mostrar esta relación de uso en un gráfico.</li>
+			</ul>
+		<div class="resumen">
+			<div class="resumenicono"><!-- imagen --></div>
+		        <h3>Resumen de la administración de requerimientos por medio de CU:</h3>		
+					<p>La mejor forma de empezar a entender un sistema es a partir de los servicios que este ofrece a su entorno, independientemente de los objetos que interactúan dentro del sistema para proveerlos; es por eso que los diagramas de uso son tan útiles en la gestión de proyectos informáticos. Haga de los diagramas de uso una práctica común en su labor de gerencia de proyectos de TI.</p>
+		</div>
